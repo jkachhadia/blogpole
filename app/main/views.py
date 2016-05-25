@@ -4,6 +4,7 @@ from . import main
 from .forms import NameForm
 from .. import db
 from ..models import User
+
 @main.route('/',methods=['GET','POST'])
 def index():
     form=NameForm()
