@@ -1,10 +1,7 @@
 {% extends "base.html" %}
-{% import "bootstrap/wtf.html" as wtf %}
-
-{% block title %}Flasky{% endblock %}
-
+{% import "bootstrap/wtf.html" as wtf  %}
+{% block title %}Blogpole - Confirm your Account{% endblock %}
 {% block page_content %}
-
 <div class="page-header">
   <h1>Hello,
   {% if current_user.is_authenticated() %}
@@ -14,4 +11,6 @@
   {% endif %}
 </h1>
 </div>
+<h2>You have not confirmed your account yet.</h2>
+
 {% endblock %}
