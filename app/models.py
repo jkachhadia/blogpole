@@ -3,6 +3,7 @@ from werkzeug.security import generate_password_hash ,check_password_hash
 from . import  login_manager
 from flask.ext.login import UserMixin
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+from flask import current_app
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))

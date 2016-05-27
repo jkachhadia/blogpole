@@ -1,9 +1,10 @@
-from flask import render_template, redirect, request, url_for , flash
+from flask import render_template, redirect, request, url_for , flash, current_app
 from . import auth
 from .forms import LoginForm,RegistrationForm
 from flask.ext.login import login_user,logout_user, current_user, login_required
 from .. models import User
 from ..email import send_email
+from .. import db
 
 @auth.before_app_request
 def before_request():
