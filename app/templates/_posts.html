@@ -1,0 +1,19 @@
+
+<ul class="media-list">
+    {% for post in posts %}
+    <li class="media" style="padding:4px;">
+            <a class="pull-left" href="{{ url_for('.user', username=post.author.username) }}">
+                <img class="img-rounded profile-thumbnail media-object" src="{{ post.author.gravatar(size=40) }}">
+            </a>
+
+
+          <div class="media-body">
+            <div class="media-heading"><a href="{{ url_for('.user', username=post.author.username) }}">{{ post.author.username }}</a><div class="pull-right">{{ moment(post.timestamp).fromNow() }}</div></div>
+
+            {{ post.body }}
+          </div>
+
+
+    </li>
+    {% endfor %}
+</ul>
