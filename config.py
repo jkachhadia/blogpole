@@ -9,6 +9,8 @@ class Config:
     BLOGPOLE_ADMIN=os.environ.get('BLOGPOLE_ADMIN')
     BLOGPOLE_MAIL_SENDER=os.environ.get('BLOGPOLE_MAIL_SENDER')
     BLOGPOLE_POSTS_PER_PAGE=20
+    BLOGPOLE_FOLLOWERS_PER_PAGE=10
+    BLOGPOLE_COMMENTS_PER_PAGE=10
 
     @staticmethod
     def init_app(app):

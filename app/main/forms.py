@@ -38,3 +38,8 @@ class EditProfileAdminForm(Form):
 class PostForm(Form):
     body=PageDownField("Whats on your mind?",validators=[Required()])
     submit=SubmitField('Submit')
+
+class CommentForm(Form):
+    body=StringField('',validators=[Required()])
+    submit=SubmitField('Submit')
+    
